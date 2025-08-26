@@ -131,7 +131,8 @@ function App() {
       onKeyUp={e => !gameOver && !isPaused && e.keyCode === 40 && setDropTime(1000 / (level + 1) + 200)}
       onFocus={(e) => e.target.requestPointerLock()}
     >
-      <h1 className="text-4xl font-bold mb-4">Tetris</h1>
+      <h1 className="text-4xl font-bold mb-2">Tetris</h1>
+      <p className="text-sm text-gray-400 mb-4">Running on: {window.location.hostname}</p>
       <div className="flex gap-8">
         <GameBoard stage={stage} />
         <aside className="w-64 flex flex-col gap-4">
